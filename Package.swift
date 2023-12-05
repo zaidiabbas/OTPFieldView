@@ -1,19 +1,15 @@
+import PackageDescription
+
 let package = Package(
     name: "OTPFieldView",
-
-    // Cut for brevity
-
+    products: [
+        .library(
+            name: "OTPFieldView",
+            targets: ["OTPFieldView"]),
+    ],
     targets: [
         .target(
             name: "OTPFieldView",
-            dependencies: [],
-            exclude: [
-                "Info.plist"
-            ],
-            resources: [
-                .process("Resources")
-            ]
-        ),
-        // Cut for brevity
-      ]
-    )
+            dependencies: []),
+    ]
+)
