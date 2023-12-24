@@ -48,6 +48,7 @@ import UIKit
 /// Different input type for OTP fields.
 @objc public enum KeyboardType: Int {
     case numeric
+    case numericEnglish
     case alphabet
     case alphaNumeric
 }
@@ -133,6 +134,8 @@ import UIKit
         switch otpInputType {
         case .numeric:
             otpField.keyboardType = .numberPad
+        case .numericEnglish:
+            otpField.keyboardType = .asciiCapableNumberPad
         case .alphabet:
             otpField.keyboardType = .alphabet
         case .alphaNumeric:
